@@ -1,0 +1,32 @@
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+input {
+    border: 1px solid rgb(170, 170, 170);
+    border-radius: 2px;
+    margin: 1.5em;
+}
+
+input:focus {
+    outline: none;
+}
+
+.result {
+    margin: 1.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.result input {
+    text-align: center;
+    height: 2em;
+    border: 1px solid rgb(133, 133, 133);
+    background-color: #fff;
+}
