@@ -53,7 +53,7 @@ function ConversorToRoman (input) {
     let result = "";
     let returned
 
-    while (value != 0) {
+    while (value !== 0) {
         /* Tratamento de acordo com a casa decimal */
         if (value.toString().length === 1) {
             returned = calc(lessTen, value)
