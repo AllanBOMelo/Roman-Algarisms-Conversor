@@ -3,7 +3,7 @@ form {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 80%;
 }
 
 input {
@@ -14,6 +14,31 @@ input {
 
 input:focus {
     outline: none;
+}
+
+.conversorContainer {
+    height: 86vh;
+}
+
+.titleContainer {
+    width: fit-content;
+    margin:0 auto;
+    padding-top: 7em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    width: fit-content;
+    margin: 0;
+    font-size: 3em;
+    text-align: center;
+}
+
+.ifError {
+    text-align: center;
+    color: red;
 }
 
 .result {
@@ -30,3 +55,4 @@ input:focus {
     border: 1px solid rgb(133, 133, 133);
     background-color: #fff;
 }
+

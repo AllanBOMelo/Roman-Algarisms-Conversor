@@ -28,10 +28,15 @@ function Conversor () {
   }
 
     return (
-         <div>
+         <div className={styles.conversorContainer}>
+
+            <div className={styles.titleContainer}>
+              <h2 className={styles.title}>Conversor de algarismos <br /> Romanos</h2>
+              <label id='ifError' className={styles.ifError}>...</label>
+            </div>
+            
             <form onSubmit={Funcao}>
                 <label>Insira aqui o numero</label>
-                <label id='ifError'>...</label>
                 <input type="text" id="input" placeholder='...' onChange={e => setInput(e.target.value)}/>
                 <button type='submit' onClick={e => setOperetor('roman')}>Calcular Romano</button>
                 <button type='submit' onClick={e => setOperetor('arabic')}>Calcular Arabico</button>
