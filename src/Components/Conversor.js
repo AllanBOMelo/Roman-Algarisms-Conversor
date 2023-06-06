@@ -32,18 +32,22 @@ function Conversor () {
 
             <div className={styles.titleContainer}>
               <h2 className={styles.title}>Conversor de algarismos <br /> Romanos</h2>
-              <label id='ifError' className={styles.ifError}>...</label>
+              <label id='ifError' className='ifError'>...</label>
             </div>
             
-            <form onSubmit={Funcao}>
-                <label>Insira aqui o numero</label>
-                <input type="text" id="input" placeholder='...' onChange={e => setInput(e.target.value)}/>
-                <button type='submit' onClick={e => setOperetor('roman')}>Calcular Romano</button>
-                <button type='submit' onClick={e => setOperetor('arabic')}>Calcular Arabico</button>
+            <form onSubmit={Funcao} className={styles.form}>
 
+                <div className={styles.inputValue}>
+                  <input type="text" id="input" placeholder='Insira aqui o valor' autoComplete='off' onChange={e => setInput(e.target.value)}/>
+                </div>
+                
+                <div className={styles.buttons}>
+                  <button type='submit' onClick={e => setOperetor('roman')}>Calcular Romano</button>
+                  <button type='submit' onClick={e => setOperetor('arabic')}>Calcular Arabico</button>
+                </div>
+                
                 <div className={styles.result}>
-                    <label>O seu resultado é</label>
-                    <input type="text" id='output' placeholder='...' disabled />
+                    <input type="text" id='output' placeholder='Resultado' disabled />
                 </div>
             </form>
          </div>

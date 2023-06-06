@@ -8,26 +8,47 @@ const romanList = [
     {roman: 'M', arabic: 1000}
 ]
 
+const romanLetters = ['I', 'V', 'X', 'L', 'C', 'D', 'M']
+
 function ConversorToArabic (input) {
     /* Tratamento de input */
     let ifError = document.getElementById('ifError');
 
     if (!input) {
         ifError.innerHTML = 'Insira um valor.';
-        return '...'
+        ifError.classList.value = 'show'
+        return 'Resultado'
     }
 
     if (!isNaN(input)) {
         ifError.innerHTML = 'O número inserido não é um algarismo romano. Tente novamente.';
-        return '...'
+        ifError.classList.value = 'show'
+        return 'Resultado'
     }
 
     /* Tratamento de input Fim */
 
     ifError.innerHTML = '...';
-    let value = input.toString();
+    ifError.classList.value = 'ifError'
+    let value = input.toString().toUpperCase();
     let result = 0;
     let array = [];
+    let match = 0;
+
+
+    for (let i = 0; i < value.length; i++) {
+        for (let j = 0; j < romanLetters.length; j++) {
+            if (value[i] === romanLetters[j]) {
+                match += 1
+            }
+        }
+    }
+
+    if (match !== value.length) {
+        ifError.innerHTML = 'O número inserido não é um algarismo romano. Tente novamente.';
+        ifError.classList.value = 'show'
+        return 'Resultado'
+    }
 
     for (let i = 0; i < value.length; i++) {
 
@@ -39,7 +60,6 @@ function ConversorToArabic (input) {
 
     }
 
-    /* MMMCMXCVIII */
     for (let i = 0; i < array.length; i++) {
         console.log(array[i])
 

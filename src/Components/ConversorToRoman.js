@@ -33,22 +33,26 @@ function ConversorToRoman (input) {
 
     if (!input) {
         ifError.innerHTML = 'Insira um valor.';
-        return '...'
+        ifError.classList.value = 'show'
+        return 'Resultado'
       }
 
     if (isNaN(input)) {
         ifError.innerHTML = 'O número inserido não é um número. Tente novamente.';
-        return '...'
+        ifError.classList.value = 'show'
+        return 'Resultado'
     }
 
     if (parseInt(input) > 3999) {
         ifError.innerHTML = 'Por favor. Insira somente números abaixo de 3999.';
-        return '...'
+        ifError.classList.value = 'show'
+        return 'Resultado'
     }
 
     /* Tratamento de input Fim */
 
     ifError.innerHTML = '...';
+    ifError.classList.value = 'ifError'
     let value = parseInt(input);
     let result = "";
     let returned
