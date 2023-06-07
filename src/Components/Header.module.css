@@ -4,6 +4,7 @@
     min-height: 3.5em;
     background-color: #434952; 
     content: "";
+    position: absolute;
 }
 
 .titleText {
