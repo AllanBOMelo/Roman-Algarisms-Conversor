@@ -32,7 +32,7 @@ function ConversorToArabic (input) {
     ifError.classList.value = 'ifError'
     let value = input.toString().toUpperCase();
     let result = 0;
-    let array = [];
+    const array = [];
     let match = 0;
 
 
